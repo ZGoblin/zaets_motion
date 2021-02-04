@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.motion.widget.MotionLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    app:layoutDescription="@xml/motion_scene"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    app:showPaths="true">
+    android:layout_height="match_parent">
 
     <View
         android:id="@+id/vBackgroud"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="#878787"
-        android:alpha="0.3"
-        app:layout_constraintHeight_percent="0.1"
+        android:alpha="1"
+        app:layout_constraintHeight_percent="0.4"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -29,7 +25,7 @@
         android:textSize="@dimen/font_size"
         android:background="@color/black"
         app:layout_constraintTop_toTopOf="@id/vBackgroud"
-        app:layout_constraintBottom_toBottomOf="@id/vBackgroud"
+        app:layout_constraintBottom_toTopOf="@id/tvFourth"
         app:layout_constraintStart_toStartOf="@id/vBackgroud"
         app:layout_constraintEnd_toStartOf="@id/tvSecond"/>
 
@@ -42,7 +38,7 @@
         android:textSize="@dimen/font_size"
         android:background="@color/black"
         app:layout_constraintTop_toTopOf="@id/vBackgroud"
-        app:layout_constraintBottom_toBottomOf="@id/vBackgroud"
+        app:layout_constraintBottom_toTopOf="@id/tvFifth"
         app:layout_constraintStart_toEndOf="@id/tvFirst"
         app:layout_constraintEnd_toStartOf="@id/tvThird"/>
 
@@ -55,9 +51,9 @@
         android:textSize="@dimen/font_size"
         android:background="@color/black"
         app:layout_constraintTop_toTopOf="@id/vBackgroud"
-        app:layout_constraintBottom_toBottomOf="@id/vBackgroud"
+        app:layout_constraintBottom_toTopOf="@id/tvSixth"
         app:layout_constraintStart_toEndOf="@id/tvSecond"
-        app:layout_constraintEnd_toStartOf="@id/tvFourth"/>
+        app:layout_constraintEnd_toEndOf="@id/vBackgroud"/>
 
     <Button
         android:id="@+id/tvFourth"
@@ -67,9 +63,9 @@
         android:textColor="@color/white"
         android:textSize="@dimen/font_size"
         android:background="@color/black"
-        app:layout_constraintTop_toTopOf="@id/vBackgroud"
-        app:layout_constraintBottom_toBottomOf="@id/vBackgroud"
-        app:layout_constraintStart_toEndOf="@id/tvThird"
+        app:layout_constraintTop_toBottomOf="@id/tvFirst"
+        app:layout_constraintBottom_toTopOf="@id/tvSeventh"
+        app:layout_constraintStart_toStartOf="@id/vBackgroud"
         app:layout_constraintEnd_toStartOf="@id/tvFifth"/>
 
     <Button
@@ -80,8 +76,8 @@
         android:textColor="@color/white"
         android:textSize="@dimen/font_size"
         android:background="@color/black"
-        app:layout_constraintTop_toTopOf="@id/vBackgroud"
-        app:layout_constraintBottom_toBottomOf="@id/vBackgroud"
+        app:layout_constraintTop_toBottomOf="@id/tvSecond"
+        app:layout_constraintBottom_toTopOf="@id/tvEighth"
         app:layout_constraintStart_toEndOf="@id/tvFourth"
         app:layout_constraintEnd_toStartOf="@id/tvSixth"/>
 
@@ -93,8 +89,8 @@
         android:textColor="@color/white"
         android:textSize="@dimen/font_size"
         android:background="@color/black"
-        app:layout_constraintTop_toTopOf="@id/vBackgroud"
-        app:layout_constraintBottom_toBottomOf="@id/vBackgroud"
+        app:layout_constraintTop_toBottomOf="@id/tvThird"
+        app:layout_constraintBottom_toTopOf="@id/tvNinth"
         app:layout_constraintStart_toEndOf="@id/tvFifth"
         app:layout_constraintEnd_toEndOf="@id/vBackgroud"/>
 
@@ -107,7 +103,6 @@
         android:textColor="@color/white"
         android:textSize="@dimen/font_size"
         android:background="@color/black"
-        android:visibility="invisible"
         app:layout_constraintTop_toBottomOf="@id/tvFourth"
         app:layout_constraintBottom_toBottomOf="@id/vBackgroud"
         app:layout_constraintStart_toStartOf="@id/vBackgroud"
@@ -121,7 +116,6 @@
         android:textColor="@color/white"
         android:textSize="@dimen/font_size"
         android:background="@color/black"
-        android:visibility="invisible"
         app:layout_constraintTop_toBottomOf="@id/tvFifth"
         app:layout_constraintBottom_toBottomOf="@id/vBackgroud"
         app:layout_constraintStart_toEndOf="@id/tvSeventh"
@@ -135,10 +129,9 @@
         android:textColor="@color/white"
         android:textSize="@dimen/font_size"
         android:background="@color/black"
-        android:visibility="invisible"
         app:layout_constraintTop_toBottomOf="@id/tvSixth"
         app:layout_constraintBottom_toBottomOf="@id/vBackgroud"
         app:layout_constraintStart_toEndOf="@id/tvEighth"
         app:layout_constraintEnd_toEndOf="@id/vBackgroud"/>
 
-</androidx.constraintlayout.motion.widget.MotionLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

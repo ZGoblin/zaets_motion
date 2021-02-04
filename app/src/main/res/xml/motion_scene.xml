@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Transition
+        app:constraintSetStart="@layout/activity_main"
+        app:constraintSetEnd="@layout/motion_cl_end"
+        app:duration="1000">
+        <OnSwipe
+            app:touchAnchorId="@+id/vBackgroud"
+            app:touchAnchorSide="bottom"
+            app:dragDirection="dragDown"/>
+
+        <KeyFrameSet>
+            <KeyPosition
+                app:keyPositionType="deltaRelative"
+                app:percentX="0.25"
+                app:framePosition="50"
+                app:motionTarget="@id/tvFirst"/>
+        </KeyFrameSet>
+        <KeyFrameSet>
+            <KeyPosition
+                app:keyPositionType="deltaRelative"
+                app:percentX="0.25"
+                app:framePosition="50"
+                app:motionTarget="@id/tvSecond"/>
+        </KeyFrameSet>
+        <KeyFrameSet>
+            <KeyPosition
+                app:keyPositionType="deltaRelative"
+                app:percentX="0.25"
+                app:framePosition="50"
+                app:motionTarget="@id/tvThird"/>
+        </KeyFrameSet>
+
+        <KeyFrameSet>
+            <KeyPosition
+                app:keyPositionType="deltaRelative"
+                app:percentY="1.0"
+                app:percentX="0"
+                app:framePosition="50"
+                app:motionTarget="@id/tvFourth"/>
+        </KeyFrameSet>
+        <KeyFrameSet>
+            <KeyPosition
+                app:keyPositionType="deltaRelative"
+                app:percentY="1.0"
+                app:percentX="0"
+                app:framePosition="50"
+                app:motionTarget="@id/tvFifth"/>
+        </KeyFrameSet>
+        <KeyFrameSet>
+            <KeyPosition
+                app:keyPositionType="deltaRelative"
+                app:percentY="1.0"
+                app:percentX="0"
+                app:framePosition="50"
+                app:motionTarget="@id/tvSixth"/>
+        </KeyFrameSet>
+
+        <KeyFrameSet>
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="75"
+                app:motionTarget="@id/tvSeventh"/>
+        </KeyFrameSet>
+        <KeyFrameSet>
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="75"
+                app:motionTarget="@id/tvEighth"/>
+        </KeyFrameSet>
+        <KeyFrameSet>
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="75"
+                app:motionTarget="@id/tvNinth"/>
+        </KeyFrameSet>
+
+    </Transition>
+</MotionScene>
